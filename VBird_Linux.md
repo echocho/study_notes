@@ -70,7 +70,7 @@
         又称VGA（Video Graphics Array）
         显示卡记忆体容量会影响到荧幕解析度与色彩深度
         GPU：嵌有3D加速晶片的显示卡
-        显卡与电脑荧幕／电视链接的格式：D-Sub；DVI；HDMI；Display port
+        显卡与电脑荧幕／电视链接的格式：D-Sub；DVI；HDMI（可同时传送影像与声音）；Display port
     0.2.4 影碟与粗存设备
         硬碟的物理组成
             硬碟盒里由许许多多圆形磁碟盘、机械手臂、磁碟读取头与主轴马达组成的
@@ -113,6 +113,7 @@
         编码系统类似‘字码对照表‘
         常用的英文编码是ASCII。这个系统中，每个符号（英文、数字或符号等）都占用1 byte的记录，因此共有2**8=256种变化。
         Unicode=UTF-8
+
 0.4 软体程式运作
     0.4.1 机器程式与编译程式
         需要CPU帮忙工作时，必须参考微指令集的内容，然后撰写让CPU读得懂的指令码给CPU执行，但是这个流程很麻烦，因为：需要了解机器语言；需要了解所有硬体的相关功能函数；程序不具有可携性；程式具有专一性
@@ -126,7 +127,82 @@
             作业系统的核心层直接参考硬体规格写成，所以同一个作业系统程式不能够在不一样的硬体架构下运行
             作业系统只是在管理整个硬体资源，包括CPU、记忆体、输入输出装置及档案系统。因此需要软体的调用
             应用程式的开发都是参考作业系统提供的开发介面，所以该应用程式只能在该作业系统上面运作而已，不可以在其他作业系统上面运作。
+        核心功能
+            系统呼叫介面（System call interface）
+            程序管理（Process control）
+            记忆体管理（memory manegement）
+            档案系统管理（filesystem management）
+            装置的驱动（device drivers）
+        作业系统与驱动程式
+            作业系统必须要能够驱动硬体，应用程式才能使用该硬体功能；
+            一般来说，作业系统会提供开发介面，让开发商制作它们的驱动程式；
+            要使用新硬体功能，必须要安装厂商提供搞得驱动程式才行；
+            驱动程式是由厂商提供的，与作业系统开发者无关。
+    0.4.3 应用程式
+            应用程式是参考作业系统提供的开发介面所开发出来的软体，这些软体可以让使用者做错，已达到某些电脑的功能应用。
 
-     
-
-
+第1章 Linux是什么与如何学习
+1.1 Linux是什么     
+    1.1.1 Linux是什么？作业系统/应用程式？
+        Linux是作业系统，具有可移植性
+        软体移植：参考硬体的功能函数并据以修改自己的作业系统程式码，使得改版后的作业系统能在另一个硬体平台上运作
+    1.1.2 Linux之前，Unix的历史
+        Linux核心有Linux Torvalds在1991年开发出来；1970年代，Unix已是一个相当稳定而成熟的作业系统
+        1969年以前：一个伟大的梦想--Bell，MIT与GE的Multics系统
+            这个时候电脑普通人很难接触到，并且难用。输入设备只有读卡器、输出设备只有打印机，使用者也无法与作业系统互动（批次型作业系统，batch system）。
+            1960年代MIT发展了相容分时系统（compatible time-sharing system，CTSS），它可以让大型主机透过提供数个终端机（terminal）以连线进入主机，来利用主机的资源进行运算工作。此结构类似client-server。比较先进的主机提供30个termial不到。
+            1965年左右，Bell，MIT和GE共同发起Multics计划，目的让大型主可以达成提供300个以上的终端机连线使用目标。
+        1969年：Ken Thompson的小型file server system
+            Thompson用一个月时间，以组合语言Assembler写出了一组核心程式，同时包括一些核心工具程式，以及一个档案系统，将Multics庞大的复杂系统简化了不少，被称为Unics，是Unix的原型。此档案系统有两个重要概念：
+                所有的程式或系统装置都是档案；不管建构编辑器还是附属档案，所写的程式只有一个目的，且要有效地完成目标。
+        1973年：Unix的正式诞生，Ritchie等人以C语言写出第一个正式Unix核心
+            Unics由于用组合语言写的，每次要安装到不同的机器都要重新编写组合语言，不方便。于是Thompson和Ritchie想要将Unics改用高级语言撰写。当时现有的高级语言是B语言，但是B语言编译出来的效果不好，于是Ritchie将B语言重新改写成C语言，再用C改写编译Unics的核心，最后成为Unix。
+            这个改变使得Unix很容易被移植到不同的机器上面。
+        1977年：重要的Unix分支--BSD的诞生
+            Bill Joy: Berkeley Software Distribution (BSD)
+        1979年：重要的System V架构与版权宣告
+            作業系統的核心(Kernel)必須要跟硬體配合， 以提供及控制硬體的資源進行良好的工作。
+            早先的Unix只能與伺服器(Server)或者是大型工作站(Workstation)劃上等號。
+            目前被稱為純種的Unix指的就是System V以及BSD這兩套囉。
+        1984年之一：x86架构的Minix作业系统开始撰写并于两年后诞生
+            Andrew S.Tanenbaum
+            这是个Unix Like的核心程序，主要在教育用途上
+            使用者购买磁片，会附上源代码，這個特色對於Linux的啟始開發階段，可是有很大的關係喔
+        1984年之二：GNU计划于FSF基金会的成立
+            Richard Mathew Stallman
+            Emacs；GNU C（GCC）；GNU C Library （glibc）；Bash shell
+            General Public License， GPL
+        1988年： 图形介面XFree86计划
+        1991年：芬兰大学生Linus Torvalds的一则简讯
+            芬蘭的赫爾辛基大學的Linus Torvalds在BBS上面貼了一則消息， 宣稱他以bash, gcc等 GNU 的工具寫了一個小小的核心程式，該核心程式單純是個玩具，不像 GNU 那麼專業。 不過該核心程式可以在Intel的386機器上面運作就是了。這讓很多人很感興趣！從此開始了Linux不平凡的路程！
+    1.1.3 关于GNU计划、自由软体与开放原始码
+        自由软体的活动
+        自由软体的版权GNU GPL
+            FSF核心的观念是：版权制度是促进社会进步的手段，版权本身不是自然权力
+            GNU是GNU's Not Unix的缩写
+        自由（Free）的真谛
+            "Free software" is a matter of liberty, not price. To understand the concept, you should think of "free speech", not "free beer". "Free software" refers to the users' freedom to run, copy, distribute, study, change, and improve the software。 -- Stallman
+            Free software具有以下特色：
+                取得軟體與原始碼：你可以根據自己的需求來執行這個自由軟體；
+                複製：你可以自由的複製該軟體；
+                修改：你可以將取得的原始碼進行程式修改工作，使之適合你的工作；
+                再發行：你可以將你修改過的程式，再度的自由發行，而不會與原先的撰寫者衝突；
+                回饋：你應該將你修改過的程式碼回饋於社群！
+            修改的任何一个free software都不可以这样：
+                修改授權：你不能將一個GPL授權的自由軟體，在你修改後而將他取消GPL授權～
+                單純販賣：你不能單純的販賣自由軟體。
+        自由软体与商业行为
+            GPL对于自由软体的作者的优点：
+                軟體安全性較佳；
+                軟體執行效能較佳；
+                軟體除錯時間較短；
+                貢獻的原始碼永遠都存在。
+        开放原始码
+        专属/专利软体（close software）
+1.2 Torvalds的Linux发展
+    1.2.1 与Minix之间
+    1.2.2 对386硬体的多工测试
+        理论上，一个CPU在一个时间内仅能进行一个程式。如果有多个程式同时出现到系统中时，具有多工功能的CPU就会在不同的程式间切换
+    1.2.3 初次释出Linux0.02
+        Linux能兼容在Unix上的软体
+        POSIX， Portable Operating System Interface， 重点自傲与规范河西与应用程式之间的介面，这是由美国与电子工程师学会（IEEE)所发布的一项标准。
