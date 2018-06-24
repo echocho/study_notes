@@ -206,3 +206,23 @@
     1.2.3 初次释出Linux0.02
         Linux能兼容在Unix上的软体
         POSIX， Portable Operating System Interface， 重点自傲与规范河西与应用程式之间的介面，这是由美国与电子工程师学会（IEEE)所发布的一项标准。
+    1.2.4 Linux的发展：虚拟团队的产生
+        略
+    1.2.5 Linux的核心版本
+        略
+    1.2.6 Linux distributions
+        略
+1.3 Linux当前应用的角色
+    1.3.1 企业环境的利用
+        网络服务器
+        关键任务的应用（金融资料库、大型企业网管环境）
+        学术机构的高效能运算任务
+            平行运行算：将原本的工作分成多份，然后交给多部主机去运算，最终再将结果收集起来的一种方式
+            Linux作业系统是这种架构下相当重要的一个环境平台
+    1.3.2 个人环境的使用
+        桌上型电脑
+        手持系统（PDA、手机）
+            Android是Linux核心的一支，只是专门用来针对手机/平板这类ARM机器所设计的
+        嵌入式系统
+    1.3.3 云端运用
+    http://linux.vbird.org/linux_basic/0110whatislinux.php
