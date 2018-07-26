@@ -1,0 +1,38 @@
+Week 2 Basic Data Processing with Pandas
+
+Resources:
+    1. StackOverflow
+    2. Planet Python: http://planetpython.org/
+        blog aggregtor for python related news
+        data science and python tutorials
+        blend of applied beginner and higher level python postings
+    3. Data Skeptic Podcast: http://dataskeptic.com/
+        mini educational lessons
+        interviews
+        trends
+        shared communicty project(OpenHouse)
+Reference:
+    1. Python for Data Analysis
+    2. Learning the Pandas Library
+
+Core data structure:
+    1. The Series
+        the cross between a list and a dictionary
+
+        type(NaN) is float
+
+        Series.iloc[index] ==> query name
+        Series.loc[name] ==> query index
+            can append or overwrite in place
+        
+    
+    2. The DataFrame
+        two-axis-labeled array (two dimensional)
+
+        !cat [file] in jupyter-notebook ==> cat [file]
+        jupyter-notebook can interact with the OS -- more tools to look at
+
+        Querying a DataFrame:
+            Boolean masking
+                the heart of fast and efficient querying in NumPy
+                one, or two dimensional
