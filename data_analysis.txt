@@ -40,16 +40,30 @@ Core data structure:
             Kind of like rational database: inner join, outer join, left join, right join; on 'column(s)'
         
     3. Pandas idoms
-	An idionmatic solution ofter has both high performance and high readability. Pandorable.
-	Use vectorization, instead of loops, as much as you can!
-	
-	Method chaining
-            Compare A(pandorable) and B(not so pandorable)	       
-		A. (df.where(df['SUMLEV']==50])
-			.dropna()
-			.set_index(['STNAME', 'CTYNAME'], inplace=True)
-			.rename(column={'ESTIMATESBASE2010': 'Estimates Base 2010'})
-		B. df = df[df['SUMLEV']==50]
-		   df.set_index(['STNAME','CTYNAME'], inplace=True)
-		   df.rename(columns={'ESTIMATESBASE2010': 'Estimates Base 2010'})		
-	 
+        An idionmatic solution ofter has both high performance and high readability. Pandorable.
+        Use vectorization, instead of loops, as much as you can!
+        
+        Method chaining
+                Compare A(pandorable) and B(not so pandorable)	       
+            A. (df.where(df['SUMLEV']==50])
+                .dropna()
+                .set_index(['STNAME', 'CTYNAME'], inplace=True)
+                .rename(column={'ESTIMATESBASE2010': 'Estimates Base 2010'})
+            B. df = df[df['SUMLEV']==50]
+            df.set_index(['STNAME','CTYNAME'], inplace=True)
+            df.rename(columns={'ESTIMATESBASE2010': 'Estimates Base 2010'})	
+
+        pd.apply()	
+        pd.groupby()
+        Scales 
+            ratio scale 
+                units are equally spaced; mathematica operations of +-/* are all valid
+            interval scale 
+                units are equally spaced, but there is no true zero
+            ordinal scale
+                the order of the units is important, but not evenly spaced
+                e.g. A+, A
+            nominal scale 
+                categories of data, but the categories have no order with respect to one another
+                e.g. teams of a sport
+          
