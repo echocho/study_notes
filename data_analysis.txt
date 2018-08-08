@@ -88,4 +88,4 @@ Statistical Basics
 			Gaussian Mixture Models
 
 		[expected value: different from mean value, is the probability from the underlying distribution.For example, the expected value of rolling a dice is 3.5 (as if we roll the dice infinitly, each of the number occurs in the same probability), while the mean of rolling a dice depends on the sample we have]
-		
+		[A book; Think Stats by Allen B. Downey, published by O'Reilly. About probability and statistics for programmers]		
