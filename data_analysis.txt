@@ -66,4 +66,26 @@ Core data structure:
             nominal scale 
                 categories of data, but the categories have no order with respect to one another
                 e.g. teams of a sport
-          
+
+Statistical Basics
+	Distribution: Set of all possible random variables
+		e.g. flipping coins for heads and tails
+			a binomial distribution (two possible outcomes)
+			discrete (categories of heads and tails, no real numbers)
+ 			evenly weighted 
+		
+		numpy has built-in distribution functions to simulate different situations
+		
+		Uniform Distribution (continuous)
+		Normal (Gausisan) Distribution
+			mean, a measure of central tendency
+			standard deviation, a measure of variability
+		
+		Chi Squared Distribution
+			skew
+			degrees of freedom
+		Bimodal Distribution
+			Gaussian Mixture Models
+
+		[expected value: different from mean value, is the probability from the underlying distribution.For example, the expected value of rolling a dice is 3.5 (as if we roll the dice infinitly, each of the number occurs in the same probability), while the mean of rolling a dice depends on the sample we have]
+		
