@@ -89,3 +89,20 @@ Statistical Basics
 
 		[expected value: different from mean value, is the probability from the underlying distribution.For example, the expected value of rolling a dice is 3.5 (as if we roll the dice infinitly, each of the number occurs in the same probability), while the mean of rolling a dice depends on the sample we have]
 		[A book; Think Stats by Allen B. Downey, published by O'Reilly. About probability and statistics for programmers]		
+
+Hypothesis Testing
+	Hypothesis: A statment we can test
+	    - alternative hypothesis: our idea, e.g. there is a difference between groups
+	    - null hypothesis: the alternatie of our idea, e.g. there is no difference between groups
+
+	Critical Value alpha (α)
+	    - the threshold as to how much chance you are willing to accept
+            - typical values in social sciences are 0.1, 0.05, or 0.01
+	
+	p-hacking
+	    - doing many tests untl you find one which is of statistical significance
+	    - at a confidence level of 0.05, we expect to find one positive result 1 time out of 20 tests
+	    - remedies: 
+		Bonferroni correctin; hold-out sets; investigation pre-registration
+
+
