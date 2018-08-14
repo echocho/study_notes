@@ -106,3 +106,41 @@ Hypothesis Testing
 		Bonferroni correctin; hold-out sets; investigation pre-registration
 
 
+Course 2 Applied Plotting, Charting & Data Representation in Python
+
+Week 1
+
+Visuallization Wheel Dimensions
+    Tools for thinking about design (Alberto Cairo)	
+	Abstraction - Figuration
+    	    - Boxes and cahrts (abstraction) or real-world physical objects (figurtation)
+	Functiionality - Decoration
+            - No embellishments (functionality) or artistic embellishments (decoration)
+	Density - Lightness
+	    - Must be studied in depth (density) or understanable at a glance (lightness)
+	Multidenmensional - Unidimensional
+	    - Different aspects of phenomena (multidimensional) or single or few items of phenomena (unidimensional)
+        Originality - Familiarity
+	    - Novel methods of visualization (originality) or established and wel understod methods of visualization (familiarity)
+ 	Novelty - Redundancy
+	     - Explaining each item once (novelty) or encoding multiple explanations of the same phenomena (redundancy)
+
+Graphical Heuristics: DAta-ink Ratio (Edward Tufte)
+Book: The Visual Display of Quantitative Information
+Reference (Dark Horse's portfolio and blog for interative visuals:
+https://www.darkhorseanalytics.com/portfolio-all/
+https://www.darkhorseanalytics.com/blog
+http://www.darkhorseanalytics.com/
+
+	What is heuristic?
+            - It's a process or rule, not known to be optimal or perfect, that is meant to guide you in decision making. 
+	    - Heuristics are meant to be followed untill you have a reason to deviate from them. 
+	Data-ink?
+	    - the non-erasable core of a graphic. The non-redundant ink arranged in response to variation in the numbers represented. 
+	    - the data-ink ratio is the amount of data-ink divided by the total ink required to print the graphic. 
+	Chartjunk
+	    - unintended optical art, e.g. excessive shading or patterning of chart features, which cause visual fatigue.
+	    - the grid 
+		thining, removing, or desaturating grid lines makes it easier to see the data, instead of being overwhelmed by the number of lines of the page. Direct labeling of data is a great way to reduce this chart junk.
+	    - the duck
+		non-data creative graphics, whether they be line art of photographs and they're inclusion in the chart.
