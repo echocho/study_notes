@@ -144,3 +144,16 @@ http://www.darkhorseanalytics.com/
 		thining, removing, or desaturating grid lines makes it easier to see the data, instead of being overwhelmed by the number of lines of the page. Direct labeling of data is a great way to reduce this chart junk.
 	    - the duck
 		non-data creative graphics, whether they be line art of photographs and they're inclusion in the chart.
+
+Graphical heuristics: Lie Factor and Saprk Lines (Edward Tufte)
+
+The Truthful Art (Alberto Cairo)
+	A required book for any data scientist.
+	Qualities of a great visualization
+	    1. Truthful
+	 	- Be aware of your actions when cleaning, summarizing and manipulatin gdata and ensure you aren't 1) misleading yourself (self deception), 2) misleading your audience
+	    2. Functionality
+	    3. Beauty
+	    4. Insightfulness
+	    5. Enlightening
+		- A combination of the previous four, but with a social ethical responsibility 
