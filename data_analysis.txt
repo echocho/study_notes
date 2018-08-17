@@ -157,3 +157,17 @@ The Truthful Art (Alberto Cairo)
 	    4. Insightfulness
 	    5. Enlightening
 		- A combination of the previous four, but with a social ethical responsibility 
+
+Week 2 Basic Charting
+Matplotlib Architecture
+	Matplotlib has a few backends available. 
+	Backend Layer
+	    - A backend is an abstraction layer which knows how to interact with the operatiing enironment, whetehr it's an operating system, or an environment like the browswer, and knows how to render maplotlib commands.
+	    - In Jupyter notebooks we use the inline backend.
+	Artist Layer
+	    - Contains containers such as Figure, Subplot, and Axes
+	    - Contains primitives, such as a Line2D and Rectangle, and collections, such as a PathCollection
+ 	Scripting Layer
+ 	    - Simplifies access to the Artist and Backend layers
+	    - In this course, we use Pyplot
+	    - Matplotlib's pyplot is an example of a procedural method for building visualizations while SVG, HTML are declarative methods of creating visualizations.
