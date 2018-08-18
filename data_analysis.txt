@@ -171,3 +171,16 @@ Matplotlib Architecture
  	    - Simplifies access to the Artist and Backend layers
 	    - In this course, we use Pyplot
 	    - Matplotlib's pyplot is an example of a procedural method for building visualizations while SVG, HTML are declarative methods of creating visualizations.
+
+Ten rules for better figures
+	1. Know your audience
+	2. Identify your message
+	3. Adapt the fiture to the support medium
+	4. Captions are not optional
+	5. Do not trust the defaults
+	6. Do not mislead the reader
+	7. Use color effectively
+	8. Avoid 'Chartjunk'
+	9. Message Trumps beauty
+	10. Get the right tool
+		---- Source: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833	
