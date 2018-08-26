@@ -183,4 +183,9 @@ Ten rules for better figures
 	8. Avoid 'Chartjunk'
 	9. Message Trumps beauty
 	10. Get the right tool
-		---- Source: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833	
+		---- Source: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833
+
+Week2 
+    Difference between a histogram and a bar chart
+	-Histograms are used to show distributions of variables while char charts are used to compare variables.
+	- Histograms plot quantitative data with ranges of the data grouped into bins or intervals while bar charts plot categorical data. 	
